@@ -21,5 +21,6 @@ After every revision, create or update `claim_verification.md` with:
 - Status: Supported / Needs user confirmation / Remove
 
 Remove unsupported claims before finalizing unless the user confirms them. Use `resume_format.md` for formatting, human readability, ATS compatibility, and bullet-writing rules.
-```
 
+Ask the user to approve the revised Markdown content before creating a Word document. After approval, create `final_resume.docx` from the approved Markdown. Do not add, rewrite, or remove resume claims during `.docx` generation.
+```

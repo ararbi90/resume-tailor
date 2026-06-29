@@ -47,6 +47,7 @@ formatted_resume.md
 tailored_resume.md
 gap_analysis.md
 claim_verification.md
+final_resume.docx
 ```
 
 When converting files:
@@ -77,8 +78,9 @@ If the user chooses format-only:
 3. Improve clarity, section order, bullet readability, and ATS compatibility.
 4. Do not add new claims.
 5. Produce `formatted_resume.md`.
-6. If requested or appropriate, produce a `.docx` using the same structure.
-7. Run the claim verification step.
+6. Run the claim verification step.
+7. Ask the user to review and approve `formatted_resume.md`.
+8. After approval, produce `final_resume.docx` from the approved Markdown using the same structure.
 
 ### 4. Tailoring Path
 
@@ -113,6 +115,8 @@ Include:
 7. Produce `tailored_resume.md`.
 8. Produce `gap_analysis.md` explaining strengths, weaknesses, and missing evidence.
 9. Run the claim verification step.
+10. Ask the user to review and approve `tailored_resume.md`.
+11. After approval, produce `final_resume.docx` from the approved Markdown using the same structure.
 
 ### 5. Gap Analysis
 
@@ -148,13 +152,28 @@ Rules:
 
 ### 7. Final Output
 
+Do not create the final `.docx` until the user has approved the revised Markdown content.
+
+After approval:
+
+1. Use the approved `formatted_resume.md` or `tailored_resume.md` as the only content source for the Word document.
+2. Create:
+
+```text
+resume-tailor/sessions/<candidate-or-date>/final_resume.docx
+```
+
+3. Use the rules in `references/resume_format.md` for margins, font sizing, section structure, date alignment, ATS safety, and human readability.
+4. If `pandoc` or another document converter is available, use it. If not, create the `.docx` programmatically or tell the user which local dependency is missing.
+5. Do not add, rewrite, or remove resume claims during `.docx` generation. The `.docx` is a formatting output of the approved Markdown content.
+
 When finished, summarize:
 
 - Files created.
 - Whether the resume was formatted or tailored.
+- Whether `final_resume.docx` was created from approved content.
 - Any unsupported claims removed.
 - Any gaps or weaknesses found.
 - Any user confirmations still needed.
 
 Keep the final message concise and include file links when running in a local workspace.
-

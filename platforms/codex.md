@@ -17,7 +17,10 @@ Use the resume-tailor workflow.
 8. Create `gap_analysis.md` for missing or weak evidence.
 9. Create `claim_verification.md` mapping each revised claim to source evidence.
 10. Remove unsupported claims before final delivery.
+11. Ask the user to approve the revised Markdown resume content.
+12. After approval, create `final_resume.docx` from the approved Markdown.
 
 Read `references/resume_format.md` before editing resume content.
-```
 
+Do not create the final `.docx` before content approval. Do not add, rewrite, or remove claims during `.docx` generation.
+```

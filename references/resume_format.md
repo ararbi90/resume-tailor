@@ -23,7 +23,8 @@ The resume must be human-readable first. ATS compatibility and concision matter,
 - Maintain the resume source as Markdown whenever possible.
 - Create or preserve a session `source_resume.md` file before editing.
 - Treat the source resume as the source of truth for all revisions.
-- Generate `.docx` or PDF outputs only after the Markdown content is reviewed.
+- Generate `.docx` or PDF outputs only after the Markdown content is reviewed and approved by the user.
+- Use the approved Markdown resume as the only content source for final document generation.
 - Do not manually add new resume claims directly in the `.docx` unless the same claim is also supported by the source resume.
 - Keep output filenames aligned with the source or session name so it is clear which Markdown file produced each Word or PDF file.
 

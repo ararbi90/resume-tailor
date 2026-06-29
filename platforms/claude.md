@@ -22,9 +22,12 @@ Workflow:
 6. Create a gap analysis for missing or weak evidence.
 7. Create a claim verification report mapping revised claims to source evidence.
 8. Remove or flag any unsupported claim.
+9. Ask the user to approve the revised Markdown resume content.
+10. After approval, create `final_resume.docx` from the approved Markdown content.
 
 Use the provided `resume_format.md` rules for structure, human readability, ATS compatibility, and bullet writing.
 
-Final output must include the revised resume, a gap analysis if tailoring was requested, and a claim verification summary.
-```
+Do not create the final `.docx` before content approval. Do not add, rewrite, or remove claims during `.docx` generation; the Word document is only a formatted output of the approved Markdown.
 
+Final output must include the revised resume, a gap analysis if tailoring was requested, a claim verification summary, and the final `.docx` after approval.
+```

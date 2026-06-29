@@ -35,6 +35,7 @@ resume-tailor/
 5. The assistant extracts requirements, revises only supported resume content, and creates a gap analysis.
 6. The assistant creates `claim_verification.md` to map revised claims back to source evidence.
 7. Unsupported claims are removed or flagged for user confirmation.
+8. After the user approves the revised Markdown content, the assistant creates `final_resume.docx`.
 
 ## Using With Codex
 
@@ -54,6 +55,7 @@ resume-tailor/sessions/<session>/formatted_resume.md
 resume-tailor/sessions/<session>/tailored_resume.md
 resume-tailor/sessions/<session>/gap_analysis.md
 resume-tailor/sessions/<session>/claim_verification.md
+resume-tailor/sessions/<session>/final_resume.docx
 ```
 
 The compact Codex prompt is also available at:
@@ -98,7 +100,7 @@ Recommended setup:
 2. Add or reference `platforms/copilot.md` in Copilot instructions.
 3. Keep `references/resume_format.md` available in the workspace.
 4. Ask Copilot to create a session folder and save the original resume as `source_resume.md`.
-5. Ask Copilot to generate Markdown first, then `.docx` or PDF only after the content is reviewed.
+5. Ask Copilot to generate Markdown first, then `.docx` or PDF only after the content is reviewed and approved.
 
 ## Anti-Fabrication Rule
 
